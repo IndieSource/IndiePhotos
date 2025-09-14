@@ -55,14 +55,12 @@
 	},
 	"audio_player": {
 		"general": {
+			"detail_kind": "artist",
 			"volume": 5,
 			"looping": {
 				"track": false,
 				"album": false
 			},
-			"detail_kind": "artist",
-			"sort_kind": "track_number",
-			"sort_order": "increasing",
 			"toolbars": {
 				"play": true,
 				"volume": true,
@@ -616,7 +614,7 @@
 				"zoom": true,
 				"rotate": false
 			},
-			"home_directory": "Pictures/"
+			"home_directory": null
 		},
 		"display": {
 			"panes": {
@@ -1466,9 +1464,7 @@
 				"desktop": 175
 			},
 			"sidebar_panels": {
-				"favorites": true,
-				"videos": true,
-				"files": false
+				"videos": true
 			},
 			"sidebar_view_kind": {
 				"phone": "tiles",

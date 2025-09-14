@@ -39,6 +39,117 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
+				<h2><i class="fa fa-file-image"></i>Supports Many Image Formats</h2>
+				<p><%= application.name %> allows you to view images using the most popular image file formats. </p>
+			</div>
+			<div class="col-sm-6">
+				<div class="icon-grid figure">
+					<div class="file item">
+						<div class="row">
+							<div class="icon"><img src="images/icons/files/jpg.svg" /></div>
+						</div>
+						<div class="row">
+							<div class="name">JPG Image</div>
+						</div>
+					</div>
+					<div class="file item">
+						<div class="row">
+							<div class="icon"><img src="images/icons/files/png.svg" /></div>
+						</div>
+						<div class="row">
+							<div class="name">PNG File</div>
+						</div>
+					</div>
+					<div class="file item">
+						<div class="row">
+							<div class="icon"><img src="images/icons/files/gif.svg" /></div>
+						</div>
+						<div class="row">
+							<div class="name">GIF File</div>
+						</div>
+					</div>
+					<div class="file item">
+						<div class="row">
+							<div class="icon"><img src="images/icons/files/bmp.svg" /></div>
+						</div>
+						<div class="row">
+							<div class="name">BMP File</div>
+						</div>
+					</div>
+					<div class="file item">
+						<div class="row">
+							<div class="icon"><img src="images/icons/files/tif.svg" /></div>
+						</div>
+						<div class="row">
+							<div class="name">TIF File</div>
+						</div>
+					</div>
+					<div class="file item">
+						<div class="row">
+							<div class="icon"><img src="images/icons/files/dng.svg" /></div>
+						</div>
+						<div class="row">
+							<div class="name">DNG File</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2><i class="fa fa-eye"></i>Powerful Photo Viewing</h2>
+				<p><%= application.name %> includes a powerful photo viewer that allows you to zoom in and inspect your photos in detail up to the pixel level, to measure them, rotate them or turn on or off pixel interpolation.
+			</div>
+			<div class="col-sm-6">
+				<div class="figure">
+					<img src="images/info/features/photo-viewing.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2><i class="fa fa-map"></i>Geospatial File System</h2>
+				<p>Assign a geolocation to any folder.  View your photos and folders as either a traditional file hierarchy or as a map.  <%= application.name %> allows you to organize and view your photos geospatially. </p>
+			</div>
+			<div class="col-sm-6">
+				<div class="figure" style="width:200px; position:relative">
+					<img src="images/welcome/map-icon.svg" />
+
+					<div class="icon-grid figure" style="position:absolute; margin-left:20px; margin-top:-125px">
+						<div class="directory item">
+							<div class="row">
+								<div class="icon"><img src="images/icons/folders/folder-full.svg" /></div>
+							</div>
+							<div class="row">
+								<div class="name" style="color:white;font-weight:bold">Site1</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="icon-grid figure" style="position:absolute; margin-left:80px; margin-top:-170px">
+						<div class="directory item">
+							<div class="row">
+								<div class="icon"><img src="images/icons/folders/folder-full.svg" /></div>
+							</div>
+							<div class="row">
+								<div class="name" style="color:white;font-weight:bold">Site2</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-sm-6">
 				<h2><i class="fa fa-smile"></i>Friendly User Interface</h2>
 				<p>The friendly and familiar user interface has been designed to blend the power of the cloud with the best aspects of the user interfaces that you already know and love. </p>
 			</div>
@@ -100,8 +211,8 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2><i class="fa fa-share"></i>File Sharing</h2>
-				<p>Share your files in a variety of ways. </p>
+				<h2><i class="fa fa-share"></i>Photo Sharing</h2>
+				<p>Share your photos in a variety of ways. </p>
 				<ul>
 					<li>share by hyperlink</li>
 					<li>share by invitation / shared file or folder</li>
@@ -112,37 +223,37 @@
 				<div class="icon-grid figure">
 					<div class="file item">
 						<div class="row">
-							<div class="icon"><img src="images/icons/files/text.svg" /></div>
+							<div class="icon"><img src="images/icons/files/jpg.svg" /></div>
 						</div>
 						<div class="row">
-							<div class="name">File</div>
+							<div class="name">Photo</div>
 						</div>
 					</div>
 					<div class="file item">
 						<div class="row">
-							<div class="icon"><img src="images/icons/files/text.svg" /></div>
+							<div class="icon"><img src="images/icons/files/jpg.svg" /></div>
 							<div class="badges">
 								<div class="links badge tooltip-trigger" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="has 1 link">
 									<i class="fa fa-link"></i>
-									<span class="num-links">3</span>
+									<span class="num-links">1</span>
 								</div>
 							</div>
 						</div>
 						<div class="row">
-							<div class="name">Linked File</div>
+							<div class="name">Linked Photo</div>
 						</div>
 					</div>
 					<div class="file item">
 						<div class="row">
 							<div class="icon">
-								<img src="images/icons/files/text.svg" />
+								<img src="images/icons/files/jpg.svg" />
 								<div class="owner small tile">
 									<div class="thumbnail" style="background-image:url(images/logos/indie-logo.svg"></div>
 								</div>
 							</div>
 						</div>
 						<div class="row">
-							<div class="name">Shared File</div>
+							<div class="name">Shared Photo</div>
 						</div>
 					</div>
 					<div class="directory item">
@@ -272,22 +383,6 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<a class="unstyled" href="#features/integrated-design">
-					<h2><i class="fa fa-network-wired"></i>Integrated</h2>
-					<p>The integrated design makes it efficient to use because sharing is integrated throughout the system and apps and the apps work seamlessly together. </p>
-				</a>
-			</div>
-			<div class="col-sm-6">
-				<div class="figure">
-					<a href="#features/integrated-design"><img src="images/info/features/integrated-design.png" /></a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="section">
-		<div class="row">
-			<div class="col-sm-6">
 				<h2><i class="fa fa-mobile"></i>Platform Independent</h2>
 				<p><%= application.name %> works across all of your devices and operating systems.  It runs on your laptop, destop, tablet, or phone and works with Windows, MacOS, Linux, iOS, and Android and requires no installation.  This means that your data and applications will always be accessible no matter what device or OS you're using. <p> 
 			</div>
@@ -296,22 +391,6 @@
 					<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/mobile/iphone.png" /></a>
 					<div class="caption"><%= application.name %> Mobile</div>
 				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="section">
-		<div class="row">
-			<div class="col-sm-6">
-				<h2><i class="fa fa-code"></i>Web Postable</h2>
-				<p>You can <a href="#features/web-postable">post and view</a> files that have been uploaded to <%= application.name %> on other websites easily with just a bit of HTML code. </p>
-			</div>
-			<div class="col-sm-6">
-				<a href="#features/web-postable">
-					<div class="code well">
-		&lt;iframe src="YOUR FILE LINK HERE"&gt;&lt;/iframe&gt
-					</div>
-				</a>
 			</div>
 		</div>
 	</div>

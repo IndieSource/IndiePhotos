@@ -1,9 +1,15 @@
 <div class="primary colored section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h1><img class="icon" src="images/logos/logo.svg" />Sharing Made Simple</h1>
-			<p><%= application.name %> is a <a href="#features/self-hostable">self-hostable</a> cloud based operating system that brings together file management, file sharing, and collaboration / social networking all in one easy to use platform. </p>
-			<p>Sharedigm can help you to share your digital life.</p>
+			<h1><img class="icon" src="images/logos/cloud-icon.svg" />What is <%= application.name %>?</h1>
+
+			<div class="well">
+				<b>indie</b> (adjective): A shortened term for independent, referring to a product, company, or artist not backed by a major, mainstream corporation. 
+			</div>
+
+			<p><%= application.name %> is a cloud-based photo management and sharing system that makes organizing and sharing your photos easy.  Best of all, you can run on your own server. </p>
+
+			<p>Declare your independence today!</p>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
@@ -11,8 +17,33 @@
 				<div class="caption">Desktop</div>
 			</div>
 			<div class="figure" style="margin-right:-100px; margin-top:-250px">
-				<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="Mobile>"><img src="images/info/mobile/iphone.png" /></a>
+				<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="Mobile"><img src="images/info/mobile/iphone.png" /></a>
 				<div class="caption">Mobile</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-circle-check"></i><%= application.name %> Advantages</h2>
+			<ul>
+				<li>Self-hostable (on-prem or in the cloud)</li>
+				<li>Free</li>
+				<li>Easy to use and install</li>
+				<li>Platform independent</li>
+				<li>Open Source</li>
+				<li>Secure</li>
+				<li>Private</li>
+			</ul>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<a class="attention" href="http://rebelcloud.org">
+					<img src="images/logos/indie-icon.svg" />
+				</a>
+				<div class="caption">Are You An Indie?</div>
 			</div>
 		</div>
 	</div>
@@ -27,7 +58,7 @@
 		<div class="col-sm-6">
 			<div class="figure">
 				<a href="#downloads">
-					<img style="width:150px" src="images/welcome/free-icon.svg" />
+					<img src="images/welcome/free-icon.svg" />
 				</a>
 			</div>
 		</div>
@@ -57,8 +88,11 @@
 		<div class="col-sm-6">
 			<div class="figure">
 				<a href="#downloads">
-					<img height="175px" src="images/welcome/rocket-icon.svg" />
+					<img src="images/logos/indierocket-icon.svg" />
 				</a>
+				<div class="caption">
+					Launch Me!
+				</div>
 			</div>
 		</div>
 	</div>
@@ -67,13 +101,8 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-pencil-alt"></i>It's Quick To Sign Up</h2>
-			<% let identityProviders = application.session.has('config')? application.session.get('config').identity_providers : undefined; %>
-			<% if (identityProviders && identityProviders.length > 0) { %>
-			<p>Signing up is quick and easy.  There's a simple registration form or if you're already signed in to an identity provider (<%= identityProviders.join(', ') %>), just hit the "Sign Up With" button and you can get started in seconds! </p>
-			<% } else { %>
-			<p>Signing up is quick and easy.  Fill out a simple registration to get started in seconds! </p>
-			<% } %>
+			<h2><i class="fa fa-sign-in-alt"></i>It's Easy to Try</h2>
+			<p>Before installing <%= application.name %> on your own server, you can try it out right here.  Just hit the "Sign Up" button to create an account and give the platform a try.</p>
 		</div>
 		<div class="col-sm-6">
 			<div class="well">
@@ -92,53 +121,12 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-mobile"></i>It's Accessible Anywhere</h2>
-			<p>Access your digital world from anywhere on <a href="#features/platform-independent">any internet connected device.</a> </p>
+			<h2><i class="fa fa-eye"></i>Access Your Photos</h2>
+			<p>Access your photos from any internet connected device. <%= application.name %> handles photos in a range of formats and allows you to zoom in for close inspection and to view your photos as a slide show. </p>
 		</div>
 		<div class="col-sm-6">
-			<a href="#features/platform-independent">
-				<div class="figure">
-					<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/mobile/iphone.png" /></a>
-					<div class="caption"><%= application.name %> Mobile</div>
-				</div>
-			</a>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-rocket"></i>Apps</h2>
-			<p><%= application.name %> has a collection of <a href="#apps">apps</a> for viewing, managing and sharing your data.</p>
-		</div>
-		<div class="col-sm-6">
-			<div class="icons animated carousel">
-				<% let apps = application.getVisibleApps(); %>
-				<% for (let i = 0; i < apps.length; i++) { %>
-				<% let app = apps.at(i); %>
-
-				<% if (!app.get('disabled')) { %>
-				<div class="carousel-cell">
-					<div class="app-icons large icon-grid items">
-						<a href="#apps/<%= app.get('app') %>">
-						<div class="item" href="#apps/profile-browser" style="text-decoration:none">	
-							<div class="row">
-								<div class="icon colored <%= app.get('color') %>">
-									<img src="images/icons/apps/<%= app.get('image') || app.get('app') + '.svg' %>" />
-									<i class="<%= app.get('icon') %>"></i>
-								</div>
-							</div>
-							<div class="row">
-								<div class="name"><%= app.get('name') %></div>
-							</div>
-						</div>
-						</a>
-					</div>
-				</div>
-				<% } %>
-
-				<% } %>
+			<div class="figure">
+				<img src="images/welcome/camera.svg" />
 			</div>
 		</div>
 	</div>
@@ -147,105 +135,113 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-tools"></i>It's Self-Hostable!</h2>
-			<p>Are you a DIY type person?  You can <a href="#features/self-hostable">run <%= application.name %> on your own server</a>! Join the host it yourself (HIY) movement to retake control over your data! </p>
+			<h2><i class="fa fa-share"></i>Share Your Photos</h2>
+			<p>If you're an amateur, <%= application.name %> makes photo sharing easy.  If you're a pro, you can set up your own custom branded photo sharing site to impress your clients or customers. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<img src="images/welcome/slide-show.svg" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-map"></i>View Your Photos on a Map</h2>
+			<p><%= application.name %> can show where your photos were taken and what direction your camera was pointed on a map.  Relive your vacation or use maps to explore your photos. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<div class="globe-photo">
+					<img height="200px" src="images/welcome/globe-icon.svg" />
+					<img height="100px" src="images/welcome/travel-photo.svg" style="transform:rotate(-30); margin-left:-100px" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-folder"></i>Manage Your Photos</h2>
+			<p><%= application.name %> lets you view and organize your photos just like on your desktop computer. <%= application.name %> makes managing your photos easy. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="icon-grid figure">
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/portraits-full.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Portraits</div>
+					</div>
+				</div>
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/images-full.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Landscapes</div>
+					</div>
+				</div>
+				<br />
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/suitcase-full.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Travel</div>
+					</div>
+				</div>
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/pets-full.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Pets</div>
+					</div>
+				</div>
+				<div class="directory item">
+					<div class="row">
+						<div class="icon"><img src="images/icons/folders/macro-full.svg" /></div>
+					</div>
+					<div class="row">
+						<div class="name">Macro</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-save"></i>Back Up Your Photos</h2>
+			<p>Use <%= application.name %> to back up your photo library to the cloud. <%= application.name %> handles large files and archive files so it's relatively easy to batch upload large numbers of photos. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<img src="images/welcome/safe.svg" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-tools"></i>Take Back Control</h2>
+			<p>You no longer need to give up control over your data just to get access to a technology platform. By running your own <%= application.name %>, you control the platform and your data. Join the <a href="#features/host-it-yourself">host it yourself (HIY)</a> movement and take back control over your (digital) life! </p>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
 				<a href="#welcome/we-can-do-it">
 					<img class="vertical" src="images/welcome/we-can-do-it.jpg" />
 				</a>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-heart"></i>You Might Also Like</h2>
-			<p>You might also like these other websites built upon the Sharedigm <a href="#platform">platform</a>. </p>
-		</div>
-		<div class="col-sm-6">
-			<div class="icons large icon-grid items">
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.rocketkitty.org" target="_blank">
-							<div class="icon">
-								<img src="images/logos/rocketkitty.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">RocketKitty</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.easybucket.org" target="_blank">
-							<div class="icon">
-								<img src="images/logos/easybucket.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">EasyBucket</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.opticexplorer.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/opticexplorer.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">OpticExplorer</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.dreamachines.ai" target="_blank">
-							<div class="icon">
-								<img src="images/logos/dreamachines.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Dreamachines</div>
-					</div>
-				</div>
-
-				<div class="item">
-					<div class="row">
-						<a href="http://cloudintosh.sharedigm.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/cloudintosh.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Cloudintosh</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://windows3000.sharedigm.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/windows3000.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Windows3000</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

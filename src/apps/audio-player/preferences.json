@@ -1,13 +1,11 @@
 {
 	"general": {
+		"detail_kind": "artist",
 		"volume": 5,
 		"looping": {
 			"track": false,
 			"album": false
 		},
-		"detail_kind": "artist",
-		"sort_kind": "track_number",
-		"sort_order": "increasing",
 		"toolbars": {
 			"play": true,
 			"volume": true,

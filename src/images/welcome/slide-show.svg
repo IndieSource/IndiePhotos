@@ -1,0 +1,43 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<style>
+			#user {
+				stroke: white;
+				stroke-width: 20;
+				stroke-linejoin: round;
+			}
+
+			#frame {
+				fill: hsl(-10, 100%, 66%);
+				stroke: white;
+				stroke-width: 25;
+			}
+		</style>
+	</defs>
+
+	<g id="slides" transform="scale(8)">
+		<rect width="5" height="10" x="42" y="25" fill="#E43535"/>
+		<path fill="#D8D8D8" d="M30,2.50247397 C30,1.67268051 30.6657972,1 31.5,1 L31.5,1 C32.3284271,1 33,1.67854309 33,2.50247397 L33,49 L30,49 L30,2.50247397 Z"/>
+		<rect width="64" height="5" y="5" fill="#BD7575" rx="2"/>
+		<path fill="#B4DFFB" d="M3,10 L60,10 L60,41.0021074 C60,43.2100825 58.1999609,45 55.9918707,45 L7.00812931,45 C4.79450062,45 3,43.2162267 3,41.0021074 L3,10 Z"/>
+		<path stroke="#D8D8D8" stroke-linecap="round" stroke-width="2" d="M31.7242161,48 L22,55.2163054"/>
+		<path stroke="#D8D8D8" stroke-linecap="round" stroke-width="2" d="M40.7242161,48 L31,55.2163054" transform="matrix(-1 0 0 1 71.724 0)"/>
+	</g>
+
+	<g id="photo" transform="scale(0.6) translate(160, 100)">
+		<g id="frame">
+			<rect x="31" y="56" width="450" height="400" transform="translate(256, 256) scale(0.9) translate(-256, -256)" />
+		</g>
+
+		<g id="user" transform="translate(256, 256) scale(0.75) translate(0, 30) translate(-256, -256)">
+			<g transform="translate(50, 40)">
+				<path d="M391.113, 426.667H35.554v-88.892c0-22.746, 8.678-45.495, 26.039-62.848 c17.353-17.357, 40.102-26.039, 62.848-26.039h177.783c22.75, 0, 45.495, 8.678, 62.852, 26.039 c17.353, 17.353, 26.035, 40.102, 26.035, 62.848V426.667z"/>
+				<circle cx="215" cy="135" r="110"/>
+			</g>
+		</g>
+
+		<g id="frame">
+			<rect x="31" y="56" width="450" height="400" transform="translate(256, 256) scale(0.9) translate(-256, -256)" fill="none" />
+		</g>
+	</g>
+</svg>

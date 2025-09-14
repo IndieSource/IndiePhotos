@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	<defs>
+		<style>
+			#user {
+				stroke: white;
+				stroke-width: 20;
+				stroke-linejoin: round;
+			}
+
+			#frame {
+				fill: hsl(-10, 100%, 66%);
+				stroke: white;
+				stroke-width: 25;
+			}
+
+			#beret {
+				stroke-width: 40;
+			}
+		</style>
+	</defs>
+
+	<g id="frame">
+		<rect x="31" y="56" width="450" height="400" transform="translate(256, 256) scale(0.9) rotate(10) translate(-256, -256)" />
+	</g>
+
+	<g id="user" transform="translate(256, 256) scale(0.75) rotate(10) translate(0, 30) translate(-256, -256)">
+		<g transform="translate(50, 40)">
+			<path d="M391.113, 426.667H35.554v-88.892c0-22.746, 8.678-45.495, 26.039-62.848 c17.353-17.357, 40.102-26.039, 62.848-26.039h177.783c22.75, 0, 45.495, 8.678, 62.852, 26.039 c17.353, 17.353, 26.035, 40.102, 26.035, 62.848V426.667z"/>
+			<circle cx="215" cy="135" r="110"/>
+		</g>
+
+		<g id="beret" transform="scale(0.65 0.5) translate(190, -80)">
+			<path d="M262.809, 146.572c13.473-9.5, 29.707-14.421, 46.622-16.832c16.595-2.362, 11.649-27.901-4.925-25.537 c-29.282, 4.166-56.333, 15.843-75.388, 38.54C107.466, 133.672, 5.155, 177.126, 0.176, 240.228 c-2.376, 30.119, 19.468, 39.152, 56.152, 41.368v58.288H379.93v-32.829c37.657, 3.928, 61.405-1.218, 63.813-31.847 C448.312, 217.381, 369.559, 163.05, 262.809, 146.572z" />
+		</g>
+	</g>
+
+	<g id="frame">
+		<rect x="31" y="56" width="450" height="400" transform="translate(256, 256) scale(0.9) rotate(10) translate(-256, -256)" fill="none" />
+	</g>
+</svg>
