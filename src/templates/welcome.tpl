@@ -13,11 +13,11 @@
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
-				<a href="images/info/desktop/desktop.png" target="_blank" class="lightbox" title="Desktop"><img src="images/info/desktop/desktop.png" /></a>
+				<a href="images/info/desktop/desktop.png" target="_blank" class="lightbox" data-fancybox="gallery" data-caption="Desktop"><img src="images/info/desktop/desktop.png" /></a>
 				<div class="caption">Desktop</div>
 			</div>
 			<div class="figure" style="margin-right:-100px; margin-top:-250px">
-				<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="Mobile"><img src="images/info/mobile/iphone.png" /></a>
+				<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" data-fancybox="gallery" data-caption="Mobile"><img src="images/info/mobile/iphone.png" /></a>
 				<div class="caption">Mobile</div>
 			</div>
 		</div>
